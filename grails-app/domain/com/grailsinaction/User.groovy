@@ -6,6 +6,7 @@ class User {
     String password
     Date dateCreated
     static hasOne = [profile: Profile]
+    static hasMany = [posts: Post]
 
     static constraints = {
         loginId size: 3..20, unique: true, nullable: false
